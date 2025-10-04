@@ -15,7 +15,7 @@ export default function Header() {
           Stock Option Analyzer
         </h1>
       </div>
-      <div className="flex items-center gap-4 px-4 sm:px-6 h-20">
+      <div className="flex items-center gap-8 px-4 sm:px-6 h-20">
         <Link
           href="/"
           className="text-gray-200 font-bold hover:text-white transition-colors"
@@ -23,10 +23,10 @@ export default function Header() {
           Home
         </Link>
         <Link
-          href="/about"
+          href="/analyze"
           className="text-gray-200 font-bold hover:text-white transition-colors"
         >
-          About
+          Analyze
         </Link>
       </div>
     </header>
