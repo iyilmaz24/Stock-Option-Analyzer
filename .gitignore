@@ -41,4 +41,4 @@ yarn-error.log*
 next-env.d.ts
 
 # internal logic
-/src/app/api/internal-logic/
+/src/app/api/services/
