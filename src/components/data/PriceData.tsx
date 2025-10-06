@@ -7,9 +7,12 @@ export default function PriceData({ priceData }: { priceData: PriceDataT }) {
       <h2>Price Data for {priceData.ticker}</h2>
       <p>Current Price: ${priceData.price}</p>
       <p>Change: {priceData.change}</p>
+      <p>Change Percent: {priceData.changePercent}</p>
       <p>Last Updated: {priceData.updatedAt}</p>
       {priceData.afterHoursPrice && (
-        <p>After Hours Price: ${priceData.afterHoursPrice}</p>
+        <p>
+          After Hrs. / Overnight Price: ${priceData.afterHoursPrice || "N/A"}
+        </p>
       )}
     </div>
   );

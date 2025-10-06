@@ -2,6 +2,7 @@ export interface PriceDataT {
   ticker: string;
   price: number;
   change: number;
+  changePercent: string;
   updatedAt: string;
   afterHoursPrice?: number;
 }
