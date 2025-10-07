@@ -9,7 +9,7 @@ export default async function AnalyzePage({
 }: {
   searchParams: { ticker?: string };
 }) {
-  const ticker = searchParams.ticker || "";
+  const ticker = (await searchParams).ticker || "";
   let marketDataJson = null;
 
   if (ticker) {
