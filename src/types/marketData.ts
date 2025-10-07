@@ -8,9 +8,10 @@ export interface PriceDataT {
 }
 
 export interface QuoteDataT {
-  week52High: number;
-  week52Low: number;
-  marketCap: number;
+  week52Range: string;
+  marketCap: string;
+  peRatio: number;
+  trailingPE: number;
   forwardPE: number;
   dividendYield: number;
   expectedSurprise: number;

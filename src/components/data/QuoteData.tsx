@@ -4,9 +4,10 @@ export default function QuoteData({ quoteData }: { quoteData: QuoteDataT }) {
   return (
     <div>
       <h2>Quote Data</h2>
-      <p>Week 52 High: {quoteData.week52High}</p>
-      <p>Week 52 Low: {quoteData.week52Low}</p>
+      <p>52 Week Range: {quoteData.week52Range}</p>
       <p>Market Cap: {quoteData.marketCap}</p>
+      <p>P/E: {quoteData.peRatio}</p>
+      <p>Trailing P/E: {quoteData.trailingPE}</p>
       <p>Forward P/E: {quoteData.forwardPE}</p>
       <p>Dividend Yield: {quoteData.dividendYield}</p>
       <p>Expected Surprise: {quoteData.expectedSurprise}</p>
