@@ -19,7 +19,7 @@ export interface QuoteDataT {
   beta: number;
 }
 
-export interface HeadlinesT {
+export interface HeadlineT {
   source: string;
   headline: string;
   url: string;
@@ -30,5 +30,5 @@ export interface HeadlinesT {
 export interface MarketDataJsonT {
   priceData: PriceDataT;
   quoteData: QuoteDataT;
-  headlines: HeadlinesT[];
+  headlines: HeadlineT[];
 }
