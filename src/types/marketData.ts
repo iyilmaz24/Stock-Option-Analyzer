@@ -27,8 +27,40 @@ export interface HeadlineT {
   summary?: string;
 }
 
+export interface PriceTargetSummaryT {
+  analystCount: number | null;
+  average: number | null;
+  high: number | null;
+  low: number | null;
+  upsideDownsidePercent: number | null;
+}
+
+export interface BrokerageRatingCountsT {
+  strongBuy: number | null;
+  buy: number | null;
+  hold: number | null;
+  sell: number | null;
+  strongSell: number | null;
+  averageBrokerageRecommendation: number | null;
+}
+
+export interface AnalystForecastT {
+  date: string | null;
+  brokerage: string | null;
+  analyst: string | null;
+  rating: string | null;
+  priceTarget: number | null;
+  upsideDownsidePercent: number | null;
+  previousRating: string | null;
+  previousPriceTarget: number | null;
+}
+
 export interface MarketDataJsonT {
   priceData: PriceDataT;
   quoteData: QuoteDataT;
   headlines: HeadlineT[];
+  zInfo: string;
+  priceTargetSummary: PriceTargetSummaryT;
+  brokerageRatingCounts: BrokerageRatingCountsT;
+  analystForecasts: AnalystForecastT[];
 }
