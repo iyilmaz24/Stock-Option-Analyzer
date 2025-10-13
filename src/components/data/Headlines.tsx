@@ -9,9 +9,7 @@ export default function Headlines({ headlines }: { headlines: HeadlineT[] }) {
           <li key={headline.url}>
             <a href={headline.url}>{headline.headline}</a>
             <p>Source: {headline.source}</p>
-            {headline.datetime && (
-              <p>Date: {new Date(headline.datetime).toLocaleString()}</p>
-            )}
+            {headline.datetime}
             {headline.summary && <p>Summary: {headline.summary}</p>}
           </li>
         ))}
