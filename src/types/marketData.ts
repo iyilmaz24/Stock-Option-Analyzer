@@ -29,10 +29,10 @@ export interface HeadlineT {
 
 export interface PriceTargetSummaryT {
   analystCount: number | null;
+  current: number | null;
   average: number | null;
   high: number | null;
   low: number | null;
-  upsideDownsidePercent: number | null;
 }
 
 export interface BrokerageRatingCountsT {
