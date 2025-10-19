@@ -3,6 +3,9 @@ import AnalyzeInput from "@/components/AnalyzeInput";
 import PriceData from "@/components/data/PriceData";
 import QuoteData from "@/components/data/QuoteData";
 import Headlines from "@/components/data/Headlines";
+import PriceTargetSummaryDisplay from "@/components/data/PriceTargetSummaryDisplay.tsx";
+import BrokerageRecommendationsTable from "@/components/data/BrokerageRecommendationsTable";
+import BrokerageRatingsVisual from "@/components/data/BrokerageRatingsVisual";
 
 export default async function AnalyzePage({
   searchParams,
@@ -24,7 +27,16 @@ export default async function AnalyzePage({
           marketDataJson ? (
             <>
               <PriceData priceData={marketDataJson.priceData} />
+              <PriceTargetSummaryDisplay
+                priceTargetSummary={marketDataJson.priceTargetSummary}
+              />
               <QuoteData quoteData={marketDataJson.quoteData} />
+              <BrokerageRatingsVisual
+                brokerageRatingCountData={marketDataJson.brokerageRatingCounts}
+              />
+              <BrokerageRecommendationsTable
+                brokerageRatingCountData={marketDataJson.brokerageRatingCounts}
+              />
               <Headlines headlines={marketDataJson.headlines} />
             </>
           ) : (
