@@ -86,30 +86,30 @@ export default function PriceTargetSummaryDisplay({
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
         <div className="bg-gray-700/50 p-4 rounded-md">
           <p className="text-sm text-gray-400">Low</p>
-          <p className="flex justify-between">
+          <div className="flex justify-between">
             <div className="text-2xl font-semibold text-white">
               {formatCurrency(low)}
             </div>
             {getPercentChangeDiv(low, current)}
-          </p>
+          </div>
         </div>
         <div className="bg-gray-700/50 p-4 rounded-md">
           <p className="text-sm text-gray-400">Average</p>
-          <p className="flex justify-between">
+          <div className="flex justify-between">
             <div className="text-2xl font-semibold text-white">
               {formatCurrency(average)}
             </div>
             {getPercentChangeDiv(average, current)}
-          </p>
+          </div>
         </div>
         <div className="bg-gray-700/50 p-4 rounded-md">
           <p className="text-sm text-gray-400">High</p>
-          <p className="flex justify-between">
+          <div className="flex justify-between">
             <div className="text-2xl font-semibold text-white">
               {formatCurrency(high)}
             </div>
             {getPercentChangeDiv(high, current)}
-          </p>
+          </div>
         </div>
       </div>
     </section>
