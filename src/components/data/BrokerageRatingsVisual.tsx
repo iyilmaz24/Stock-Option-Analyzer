@@ -13,11 +13,11 @@ import {
 } from "recharts";
 
 const COLORS = {
-  strongBuy: "#0E4C03FF",
-  buy: "#4F7F08FF",
-  hold: "#E0A800FF",
-  sell: "#FF2600FF",
-  strongSell: "#7A1919FF",
+  strongBuy: "#0F5A04FF",
+  buy: "#578E06FF",
+  hold: "#757575FF",
+  sell: "#D53B1FFF",
+  strongSell: "#740404FF",
 };
 
 const ratingLabels: { [key in keyof typeof COLORS]: string } = {
@@ -29,11 +29,11 @@ const ratingLabels: { [key in keyof typeof COLORS]: string } = {
 };
 
 const ratingsOrder: (keyof typeof COLORS)[] = [
-  "strongBuy",
-  "buy",
-  "hold",
-  "sell",
   "strongSell",
+  "sell",
+  "hold",
+  "buy",
+  "strongBuy",
 ];
 
 export default function BrokerageRatingsVisual({
@@ -49,7 +49,7 @@ export default function BrokerageRatingsVisual({
   // with a single object that holds all the counts.
   const chartData = [
     {
-      name: "Ratings", // This is the label for the single bar on the X-axis
+      name: "Current", // This is the label for the single bar on the X-axis
       strongBuy: brokerageRatingCountData.strongBuy || 0,
       buy: brokerageRatingCountData.buy || 0,
       hold: brokerageRatingCountData.hold || 0,
