@@ -6,6 +6,7 @@ import Headlines from "@/components/data/Headlines";
 import PriceTargetSummaryDisplay from "@/components/data/PriceTargetSummaryDisplay.tsx";
 import BrokerageRecommendationsTable from "@/components/data/BrokerageRecommendationsTable";
 import BrokerageRatingsVisual from "@/components/data/BrokerageRatingsVisual";
+import ZInfo from "@/components/data/ZInfo";
 
 export default async function AnalyzePage({
   searchParams,
@@ -26,7 +27,11 @@ export default async function AnalyzePage({
         {ticker ? (
           marketDataJson ? (
             <>
-              <PriceData priceData={marketDataJson.priceData} />
+              <div className="flex w-fit justify-center items-center gap-8">
+                <PriceData priceData={marketDataJson.priceData} />
+                <ZInfo zRank={marketDataJson.zInfo} />
+              </div>
+
               <PriceTargetSummaryDisplay
                 priceTargetSummary={marketDataJson.priceTargetSummary}
               />

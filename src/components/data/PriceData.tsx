@@ -8,7 +8,7 @@ export default function PriceDataDisplay({
 }) {
   if (!priceData) {
     return (
-      <section className="w-full max-w-4xl my-4 p-6 rounded-lg bg-gray-800/50 border border-gray-700">
+      <section className="w-fit max-w-4xl my-4 p-6 rounded-lg bg-gray-800/50 border border-gray-700">
         <p className="text-gray-400">Price data could not be loaded.</p>
       </section>
     );
@@ -17,8 +17,8 @@ export default function PriceDataDisplay({
   const isPositiveChange = priceData.change >= 0;
 
   return (
-    <section className="w-full max-w-4xl my-4 p-6 rounded-lg bg-gray-800/50 border border-gray-700">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+    <section className="w-fit max-w-4xl my-4 p-6 rounded-lg bg-gray-800/50 border border-gray-700">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-40">
         {/* Ticker and Price */}
         <div className="text-left">
           <h2 className="text-4xl font-bold text-white">{priceData.ticker}</h2>
