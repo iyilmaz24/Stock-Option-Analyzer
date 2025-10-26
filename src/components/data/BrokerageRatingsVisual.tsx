@@ -13,11 +13,11 @@ import {
 } from "recharts";
 
 const COLORS = {
-  strongBuy: "#0F5A04FF",
-  buy: "#578E06FF",
-  hold: "#757575FF",
-  sell: "#D53B1FFF",
-  strongSell: "#740404FF",
+  strongBuy: "#125F06FF",
+  buy: "#2D8E06FF",
+  hold: "#CEC3C37D",
+  sell: "#C31E1EFF",
+  strongSell: "#7B0606FF",
 };
 
 const ratingLabels: { [key in keyof typeof COLORS]: string } = {
@@ -101,11 +101,11 @@ export default function BrokerageRatingsVisual({
             <Tooltip
               cursor={{ fill: "rgba(128, 128, 128, 0.1)" }}
               contentStyle={{
-                backgroundColor: "#2d3748",
+                backgroundColor: "#181313FF",
                 borderColor: "#4a5568",
                 borderRadius: "0.5rem",
               }}
-              labelStyle={{ color: "#e2e8f0" }}
+              labelStyle={{ color: "#FFFFFFFF" }}
             />
             <Legend />
             {/* Create a <Bar> for each rating type that has a value > 0 */}
